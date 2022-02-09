@@ -2,10 +2,7 @@ package com.github.andreldsr.gymmanager.data.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -18,8 +15,10 @@ public class Exercise {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    @Column(columnDefinition = "text")
     private String image;
     private String video;
+    @Column(columnDefinition = "text")
     private String description;
     private int repetitions;
     private int series;
