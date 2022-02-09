@@ -4,7 +4,9 @@ import com.github.andreldsr.gymmanager.data.model.Configuration;
 import com.github.andreldsr.gymmanager.web.request.ChangeConfigurationRequest;
 
 public interface ConfigurationService {
-    public Configuration getConfiguration();
+    Configuration getConfigurationFull();
 
-    public Configuration changeConfiguration(ChangeConfigurationRequest changeConfigurationRequest);
+    ChangeConfigurationRequest getConfiguration();
+
+    Configuration changeConfiguration(ChangeConfigurationRequest changeConfigurationRequest);
 }

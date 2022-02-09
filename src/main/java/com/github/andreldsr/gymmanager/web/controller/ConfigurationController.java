@@ -14,8 +14,13 @@ public class ConfigurationController {
     private ConfigurationService configurationService;
 
     @GetMapping
-    public ResponseEntity<Configuration> getConfiguration(){
+    public ResponseEntity<ChangeConfigurationRequest> getConfiguration(){
         return ResponseEntity.ok(configurationService.getConfiguration());
+    }
+
+    @GetMapping("/full")
+    public ResponseEntity<Configuration> getConfigurationFull(){
+        return ResponseEntity.ok(configurationService.getConfigurationFull());
     }
 
     @PostMapping
